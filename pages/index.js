@@ -1,8 +1,11 @@
 import React from 'react'
 import Head from 'next/head'
 import Nav from '../components/nav'
+import { withTranslation } from '../i18n'
 
-const Home = () => (
+const Home = ({ t }) => {
+
+  return (
   <div>
     <Head>
       <title>Home</title>
@@ -11,7 +14,7 @@ const Home = () => (
     <Nav />
 
     <div className='hero'>
-      <h1 className='title'>Welcome to Next.js!</h1>
+      <h1 className='title'>{ t('title') }</h1>
       <p className='description'>
         To get started, edit <code>pages/index.js</code> and save to reload.
       </p>
@@ -82,6 +85,15 @@ const Home = () => (
       }
     `}</style>
   </div>
-)
+  )
+}
 
-export default Home
+const Composed = withTranslation('common')(Home)
+
+Composed.getInitialProps = () => {
+  return {
+    namespacesRequired: ['common']
+  }
+}
+
+export default Composed

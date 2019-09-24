@@ -3,12 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "node server.js",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
+    "heroku-ssl-redirect": "^0.0.4",
     "next": "9.0.6",
+    "next-i18next": "^1.2.1",
+    "next-routes": "^1.4.2",
     "react": "16.9.0",
     "react-dom": "16.9.0"
   }
