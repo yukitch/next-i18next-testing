@@ -4,8 +4,6 @@ const NextI18NextInstance = new NextI18Next({
   defaultLanguage: 'ja',
   otherLanguages: ['en'],
   debug: true,
-  fallbackLng: 'ja',
-  localSubpaths: {en: 'en', ja: 'ja'}
 })
 
 export default NextI18NextInstance

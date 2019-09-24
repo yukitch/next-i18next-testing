@@ -1,11 +1,12 @@
 {
+  "main": "./dist/server.js",
   "name": "next-i18next-testing",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
-    "start": "next start"
+    "start": "NODE_ENV=production node server.js"
   },
   "dependencies": {
     "compression": "^1.7.4",

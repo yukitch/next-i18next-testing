@@ -88,12 +88,10 @@ const Home = ({ t }) => {
   )
 }
 
-const Composed = withTranslation('common')(Home)
-
-Composed.getInitialProps = () => {
+Home.getInitialProps = () => {
   return {
     namespacesRequired: ['common']
   }
 }
 
-export default Composed
+export default withTranslation('common')(Home)
